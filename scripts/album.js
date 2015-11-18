@@ -26,6 +26,19 @@ var albumMarconi = {
 ]
  };
 
+var albumLogic = {
+    name: 'The Incredible Story',
+    artist: 'Logic',
+    label: 'Columbia',
+    year: '2015',
+    albumArtURL: 'assets/images/album_covers/20.png',
+    songs: [
+        { name: 'City of Stars', length: '3:03' },
+        { name: 'InnerMission', length: '3:37' },
+        { name: 'Young Jesus', length: '3:55' }
+]
+ };
+
 var createSongRow = function(songNumber, songName, songLength)
 {
     var template =
