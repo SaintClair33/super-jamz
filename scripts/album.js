@@ -52,8 +52,6 @@ var createSongRow = function(songNumber, songName, songLength)
     return template;
 };
 
-var setCurrentAlbum = function(album)
-{
     //#Assign the album info by grabbing element class name
     var albumTitle = document.getElementsByClassName('album-view-title')[0];
     var albumArtist = document.getElementsByClassName('album-view-artist')[0];
@@ -61,7 +59,9 @@ var setCurrentAlbum = function(album)
     var albumImage = document.getElementsByClassName('album-cover-art')[0];
     var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
 
-    //#2 Takes album passed in through setCurrentAlbum function and sets the 
+    //#2 Takes album passed in through setCurrentAlbum function and sets the
+var setCurrentAlbum = function(album)
+{
     albumTitle.firstChild.nodeValue = album.name;
     albumArtist.firstChild.nodeValue = album.artist;
     albumReleaseInfo.firstChild.nodeValue = album.year + ' ' + album.label;
@@ -79,5 +79,18 @@ var setCurrentAlbum = function(album)
 
 window.onload = function()
 {
-    setCurrentAlbum(albumPicasso);
+    setCurrentAlbum(album_listing);
+    var albums = [album_listing, albumMarconi, albumLogic];
+    var index  = 1;
+    albumImage.addEventListener("click", function(event) {
+        setCurrentAlbum(albums[index]);
+        index++;
+        if(index  == albums.length)
+        {
+            index = 0;
+        }
+    });
+        
+                            
+        
 };
