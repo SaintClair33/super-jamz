@@ -1,8 +1,8 @@
-var album_listing = {
- name: = "The Colors",
- artist: = "Pablo Picasso",
- label: = "Cubism",
- year: = "1881",
+var albumListing = {
+ name: 'The Colors',
+ artist: 'Pablo Picasso',
+ label: 'Cubism',
+ year: '1881',
  albumArtUrl: 'assets/images/album_covers/01.png',
  songs: [
      { name: 'Blue', length: '4:26' },
@@ -31,7 +31,7 @@ var albumLogic = {
     artist: 'Logic',
     label: 'Columbia',
     year: '2015',
-    albumArtURL: 'assets/images/album_covers/20.png',
+    albumArtURL: 'assets/images/album_covers/hanuman.png',
     songs: [
         { name: 'City of Stars', length: '3:03' },
         { name: 'InnerMission', length: '3:37' },
@@ -79,8 +79,8 @@ var setCurrentAlbum = function(album)
 
 window.onload = function()
 {
-    setCurrentAlbum(album_listing);
-    var albums = [album_listing, albumMarconi, albumLogic];
+    setCurrentAlbum(albumListing);
+    var albums = [albumListing, albumMarconi, albumLogic];
     var index  = 1;
     albumImage.addEventListener("click", function(event) {
         setCurrentAlbum(albums[index]);
