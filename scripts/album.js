@@ -108,7 +108,7 @@ var findParentByClassName = function(element, targetClass) {
     
 };
 
-findParentByClassName(child, 'bannana');
+
 var getSongItem = function(element) {
     switch (element.className) 
     {
